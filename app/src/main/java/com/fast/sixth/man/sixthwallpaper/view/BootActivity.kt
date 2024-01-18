@@ -3,6 +3,8 @@ package com.fast.sixth.man.sixthwallpaper.view
 import android.content.Context
 import android.util.Log
 import androidx.lifecycle.lifecycleScope
+import com.fast.sixth.man.core.FancyOpenHelper
+import com.fast.sixth.man.other.ActivityLifeHelper
 import com.fast.sixth.man.sixthwallpaper.R
 import com.fast.sixth.man.sixthwallpaper.base.BaseActivity
 import com.fast.sixth.man.sixthwallpaper.data.NetUtils
@@ -11,6 +13,7 @@ import com.fast.sixth.man.sixthwallpaper.databinding.ActivityBootBinding
 import com.fast.sixth.man.sixthwallpaper.model.NoViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import okhttp3.CacheControl
@@ -25,6 +28,10 @@ import java.nio.charset.StandardCharsets
 
 class BootActivity : BaseActivity<ActivityBootBinding, NoViewModel>() {
 
+    private var isResume = false
+    private var isShow = false
+    private var mJob: Job? = null
+
     override fun getLayoutId(): Int {
         return R.layout.activity_boot
     }
@@ -36,26 +43,66 @@ class BootActivity : BaseActivity<ActivityBootBinding, NoViewModel>() {
     override fun observeViewModel() {
         getLock()
         lifecycleScope.launch {
-            binding.aivLoading.startContinuousRotation()
-            delay(2000)
+            binding.aivLoading.post {
+                binding.aivLoading.startContinuousRotation()
+            }
+            delay(3500)
             viewModel.jumpToMain.value = true
         }
 
         viewModel.jumpToMain.observe(this) {
-            if (it) {
+            Log.i("TAG", "observeViewModel: $isShow")
+            if (it && isShow.not()) {
                 startActivityFirst<MainActivity>()
                 finish()
             }
         }
+        FancyOpenHelper.load(this.applicationContext)
     }
 
-    private fun getLock(){
+    private fun getLock() {
         if (NetUtils.uuid_fancy_scenery.isEmpty()) {
             NetUtils.uuid_fancy_scenery = java.util.UUID.randomUUID().toString()
         }
         lifecycleScope.launch(Dispatchers.IO) {
             getRecordNetData(this@BootActivity)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        isResume = true
+        showJob()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        isResume = false
+        mJob?.cancel()
+    }
+
+    private fun showJob() {
+        mJob?.cancel()
+        mJob = lifecycleScope.launch {
+            delay(400)
+            while (isResume) {
+                isShow =
+                    FancyOpenHelper.showFancySp(this@BootActivity, binding.adLayout, showFinish = {
+                        j()
+                    })
+                if (isShow) {
+                    break
+                }
+                delay(411)
+            }
+        }
+    }
+
+    private fun j() {
+        if (ActivityLifeHelper.isAppResume) {
+            startActivityFirst<MainActivity>()
+        }
+        finish()
     }
 
     private fun getRecordNetData(context: Context) {

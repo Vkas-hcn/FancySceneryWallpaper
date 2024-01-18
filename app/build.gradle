@@ -10,6 +10,7 @@ stringfog {
     enable true
     kg new RandomKeyGenerator()
     mode StringFogMode.base64
+    fogPackages = ['com.fast.sixth.man']
 }
 android {
     namespace 'com.fast.sixth.man.sixthwallpaper'
@@ -30,6 +31,10 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -45,9 +50,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
 }
 
 dependencies {
+    implementation project(":Fancy")
     implementation "com.squareup.okhttp3:okhttp:4.10.0"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
