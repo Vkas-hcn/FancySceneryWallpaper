@@ -3,7 +3,10 @@ package com.fast.sixth.man.other
 import android.app.Activity
 import android.app.Application
 import android.content.Context
+import android.os.Build
+import com.fast.sixth.man.R
 import com.fast.sixth.man.listener.LifecycleActivityListener
+import com.fast.sixth.man.other.info.FancySceneryNetwork
 import kotlinx.coroutines.Job
 
 /**
@@ -31,6 +34,12 @@ class ActivityLifeHelper(val context: Context) {
             mFinishJob?.cancel()
             mFinishJob = LifecycleActivityListener.finishAllActivity()
         }
+
+        fun isAppRCheckAllow(): Boolean {
+            if (isAppResume) return false
+            FancySceneryNetwork.postMai("isbackground")
+            return true
+        }
     }
 
     fun register(app: Application) {
@@ -40,7 +49,13 @@ class ActivityLifeHelper(val context: Context) {
     }
 
     private fun activityOnCreate(activity: Activity) {
-
+        if (LifecycleActivityListener.isTarget()) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                activity.setTranslucent(true)
+            } else {
+                activity.window.setBackgroundDrawableResource(R.color.fancy_color)
+            }
+        }
     }
 
 }

@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.lifecycleScope
 import com.fast.sixth.man.core.FancyOpenHelper
+import com.fast.sixth.man.listener.LifecycleActivityListener
 import com.fast.sixth.man.other.ActivityLifeHelper
 import com.fast.sixth.man.sixthwallpaper.R
 import com.fast.sixth.man.sixthwallpaper.base.BaseActivity
@@ -41,6 +42,7 @@ class BootActivity : BaseActivity<ActivityBootBinding, NoViewModel>() {
     }
 
     override fun observeViewModel() {
+        LifecycleActivityListener.isInBoot = true
         getLock()
         lifecycleScope.launch {
             binding.aivLoading.post {
@@ -81,6 +83,11 @@ class BootActivity : BaseActivity<ActivityBootBinding, NoViewModel>() {
         mJob?.cancel()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        LifecycleActivityListener.isInBoot = false
+    }
+
     private fun showJob() {
         mJob?.cancel()
         mJob = lifecycleScope.launch {
@@ -112,7 +119,9 @@ class BootActivity : BaseActivity<ActivityBootBinding, NoViewModel>() {
         val map = NetUtils.setCloakData(context)
         Log.e("TAG", "map-data=${map} ")
         val client = OkHttpClient()
-        val urlBuilder = "https://slur.wallpapercollectioncolorfulscenery.com/mould/ontario".toHttpUrl().newBuilder()
+        val urlBuilder =
+            "https://slur.wallpapercollectioncolorfulscenery.com/mould/ontario".toHttpUrl()
+                .newBuilder()
         map.forEach { entry ->
             urlBuilder.addEncodedQueryParameter(
                 entry.key,

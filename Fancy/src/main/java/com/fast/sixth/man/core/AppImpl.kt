@@ -31,5 +31,6 @@ class AppImpl : AppListener {
         activityLifeHelper.register(app)
         initCore = InitCore(app)
         initCore.startInit()
+        initCore.checkTask()
     }
 }

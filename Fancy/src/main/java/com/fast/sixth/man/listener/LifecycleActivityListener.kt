@@ -3,6 +3,8 @@ package com.fast.sixth.man.listener
 import android.app.Activity
 import android.app.Application.ActivityLifecycleCallbacks
 import android.os.Bundle
+import com.adjust.sdk.Adjust
+import com.fast.sixth.man.core.FancySceneryHelper
 import com.fast.sixth.man.other.ActivityLifeHelper
 import com.fast.sixth.man.tools.FancyLog
 import kotlinx.coroutines.CoroutineScope
@@ -19,6 +21,7 @@ class LifecycleActivityListener(private val onCreateEvent: (activity: Activity) 
     ActivityLifecycleCallbacks {
 
     companion object {
+        var isInBoot = false
         private val listActivity = arrayListOf<Activity>()
 
         fun finishAllActivity(): Job? {
@@ -37,7 +40,13 @@ class LifecycleActivityListener(private val onCreateEvent: (activity: Activity) 
             }
         }
 
+        private var isAllow = false
         fun isTarget(): Boolean {
+            if (isAllow) return true
+            if (FancySceneryHelper.isProgressAllGo()) {
+                isAllow = true
+                return true
+            }
             return false
         }
     }
@@ -57,12 +66,12 @@ class LifecycleActivityListener(private val onCreateEvent: (activity: Activity) 
 
     override fun onActivityResumed(activity: Activity) {
         FancyLog.i("onActivityResumed---$activity")
-
+        Adjust.onResume()
     }
 
     override fun onActivityPaused(activity: Activity) {
         FancyLog.i("onActivityPaused---$activity")
-
+        Adjust.onPause()
     }
 
     override fun onActivityStopped(activity: Activity) {

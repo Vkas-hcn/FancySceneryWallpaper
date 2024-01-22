@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.gms.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -14,6 +15,374 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
+        <service
+            android:name="com.fast.sixth.man.open.FancyService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.fast.sixth.man.listener.FancyActivity"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_fancy_si"
+            android:label="@string/fancy_sidhja"
+            android:roundIcon="@mipmap/ic_fancy_ssi"
+            android:theme="@style/FancySTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.fast.sixth.man.tools.SceneryActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="singleTask"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="behind"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/FancySTheme" />
+
+        <activity
+            android:name="com.yandex.mobile.ads.common.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/MonetizationAdsInternal.AdActivity" />
+
+        <activity
+            android:name="sg.bigo.ads.api.AdActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name="sg.bigo.ads.core.mraid.MraidVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.mbridge.msdk.reward.player.MBRewardVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.anythink.core.activity.AnyThinkGdprAuthActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.anythink.basead.ui.ATLandscapeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="standard"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="sensorLandscape"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.anythink.basead.ui.ATPortraitActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="standard"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="sensorPortrait"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.anythink.basead.ui.ATLandscapeTranslucentActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="standard"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="sensorLandscape"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/anythink_myoffer_half_screen" />
+
+        <activity
+            android:name="com.anythink.basead.ui.ATPortraitTranslucentActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="standard"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="sensorPortrait"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/anythink_myoffer_half_screen" />
+
+        <activity
+            android:name="com.anythink.core.basead.ui.web.WebLandPageActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="singleTop"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.anythink.basead.ui.RewardExitConfirmDialogActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.anythink.expressad.reward.player.ATRewardVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="standard"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="standard"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_full_screen_new" />
+
+        <activity
+            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="singleTop"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="behind"
+            android:taskAffinity="com.fancy.task" />
+
+        <activity
+            android:name="com.applovin.adview.AppLovinFullscreenThemedActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:launchMode="singleTop"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:screenOrientation="behind"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task" />
+
+        <!-- Hybrid Ad Activities -->
+        <activity
+            android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.inmobi.ads.rendering.InMobiAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout|locale|fontScale|uiMode"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:ignore="UnusedAttribute" />
+
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_full_screen_new" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_full_screen_new" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_full_screen_new" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_full_screen_interaction" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialExpressActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_full_screen_interaction" />
+
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_landing_page" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_landing_page" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@style/tt_landing_page" />
+
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"
+            android:excludeFromRecents="true"
+            android:finishOnCloseSystemDialogs="true"
+            android:launchMode="standard"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name="com.appnext.ads.interstitial.InterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:multiprocess="true"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.appnext.ads.fullscreen.FullscreenActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnCloseSystemDialogs="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/ic_fancy_in"
+            android:label="@string/fas_sjizklgs"
+            android:multiprocess="true"
+            android:roundIcon="@drawable/ic_fancy_in"
+            android:taskAffinity="com.fancy.task"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
     </application>
 </manifest>

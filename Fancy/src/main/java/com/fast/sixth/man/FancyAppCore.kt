@@ -41,6 +41,7 @@ class FancyAppCore : FancyListener {
             appListenerList.forEach {
                 it.mainProgress(application)
             }
+            helper.adjFancyInit()
         }
     }
 
