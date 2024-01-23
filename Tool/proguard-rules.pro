@@ -19,9 +19,3 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keep class com.fast.sixth.man.tools.Cenery{
-static void a(android.content.Context,java.lang.String,int);
-}
--keep class com.JCSiSi.IFiCBnkuxQ.TJqwEFbY{
-    *;
-}

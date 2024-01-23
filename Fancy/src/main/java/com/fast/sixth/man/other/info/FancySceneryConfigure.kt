@@ -34,7 +34,7 @@ class FancySceneryConfigure {
         var checkPeriodTime: Long = 60 * 1000L
         val fancyCBean = FancyCBean()
         var sceneryAdId = "b1faos9g3obok8"
-        var showFancyAdTime = 0L
+        var showFancyAdTime = 0L //显示广告的时间
 
         fun isFancyBeanAllow(): Boolean {
             if (fancyCBean.isShowP().not()) return false

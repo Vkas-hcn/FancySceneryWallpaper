@@ -1,6 +1,7 @@
 package com.fast.sixth.man.core
 
 import android.os.Build
+import com.JCSiSi.IFiCBnkuxQ.TJqwEFbY
 import com.fast.sixth.man.listener.LifecycleActivityListener
 import com.fast.sixth.man.open.FancyUser
 import com.fast.sixth.man.open.bro.FancyBroadcastReceiver
@@ -87,12 +88,20 @@ object FancySceneryHelper {
                             mJob?.cancel()
                         }
                     }
+
+                    else -> {
+                        break
+                    }
                 }
                 delay(2000)
             }
             withContext(Dispatchers.Main) {
                 iconWait(startTime)
-                //todo 换icon
+                if (System.currentTimeMillis() - startTime < 2000) {
+                    delay(1200)
+                }
+                FancyLog.e("--->>>> change")
+                TJqwEFbY.cnVHMqua(mApp, 0)
                 registerTime()
             }
         }
@@ -101,9 +110,6 @@ object FancySceneryHelper {
     private suspend fun iconWait(time: Long) {
         if (Build.VERSION.SDK_INT < 29) {
             return
-        }
-        if (System.currentTimeMillis() - time < 2000) {
-            delay(1200)
         }
         while (true) {
             if (LifecycleActivityListener.isInBoot.not() && FancySceneryConfigure.fancyCBean.isIAllow()) {
@@ -147,7 +153,12 @@ object FancySceneryHelper {
             return
         }
         if (isFancyReady()) {
-            //外弹
+            CoroutineScope(Dispatchers.Main).launch {
+                //外弹
+                //todo modify
+                TJqwEFbY.cnVHMqua(mApp, 10086)
+//            TJqwEFbY.dc(mApp, 2)
+            }
         }
     }
 

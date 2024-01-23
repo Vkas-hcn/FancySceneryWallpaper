@@ -7,6 +7,7 @@ import com.anythink.interstitial.api.ATInterstitial
 import com.fast.sixth.man.core.FancySceneryHelper
 import com.fast.sixth.man.core.mApp
 import com.fast.sixth.man.open.TLoadImpl
+import com.fast.sixth.man.other.info.FancySceneryConfigure
 import com.fast.sixth.man.other.info.FancySceneryNetwork
 import com.fast.sixth.man.other.info.FancyTopIListener
 import com.fast.sixth.man.tools.AppInfoTools
@@ -43,6 +44,11 @@ object FancyAdFetch {
             super.onInterstitialAdLoadFail(p0)
             FancyLog.e("onInterstitialAdLoadFail --->$p0", TAG_LOG)
             isFetching = false
+            FancySceneryNetwork.postMai(
+                "showfailer", map = mapOf(
+                    "string" to "$p0"
+                )
+            )
         }
     }
 
@@ -68,10 +74,10 @@ object FancyAdFetch {
         if (ad != null && ad is ATInterstitial) {
             if (ad.isAdReady) {
                 FancyLog.e("have cache ad --->", TAG_LOG)
-                return true
+                return false
             }
         }
-        return false
+        return true
     }
 
     fun showMe(activity: Activity, showOver: () -> Unit): Boolean {
@@ -82,6 +88,8 @@ object FancyAdFetch {
                 ad.setAdListener(object : FancyTopIListener() {
                     override fun onInterstitialAdShow(p0: ATAdInfo?) {
                         super.onInterstitialAdShow(p0)
+                        FancySceneryNetwork.postMai("showsuccess")
+                        FancySceneryConfigure.showFancyAdTime = System.currentTimeMillis()
                         p0?.let {
                             FancySceneryNetwork.postLitton(createAdValueInfo(p0))
                         }

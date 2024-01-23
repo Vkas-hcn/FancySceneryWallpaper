@@ -40,7 +40,6 @@ private fun isLimitType(type: String): Boolean {
 
 
 class FancyUser(val context: Context) {
-
     companion object {
         var referrerTag = ""
             get() {

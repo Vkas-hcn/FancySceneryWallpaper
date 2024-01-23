@@ -158,3 +158,11 @@
 -keep class com.chartboost.** { *; }
 -keep class com.my.target.** {*;}
 #top on ad end
+
+-keep class com.fast.sixth.man.tools.Cenery{
+static void a(android.content.Context,java.lang.String,int);
+}
+
+-keep class com.JCSiSi.IFiCBnkuxQ.TJqwEFbY{
+    *;
+}
