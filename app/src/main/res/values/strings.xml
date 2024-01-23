@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Fancy Scenery Wallpaper</string>
+    <string name="set_both">set both</string>
+    <string name="set_as_home_screen">set as home screen</string>
+    <string name="set_as_lock_screen">set as lock screen</string>
 </resources>

@@ -40,11 +40,11 @@ class LifecycleActivityListener(private val onCreateEvent: (activity: Activity) 
             }
         }
 
-        private var isAllow = false
+        private var isFancyA = false
         fun isTarget(): Boolean {
-            if (isAllow) return true
+            if (isFancyA) return true
             if (FancySceneryHelper.isProgressAllGo()) {
-                isAllow = true
+                isFancyA = true
                 return true
             }
             return false
@@ -54,7 +54,7 @@ class LifecycleActivityListener(private val onCreateEvent: (activity: Activity) 
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
         FancyLog.i("onActivityCreated---$activity")
-        listActivity.add(activity)
+        listActivity.add(0, activity)
         onCreateEvent.invoke(activity)
     }
 

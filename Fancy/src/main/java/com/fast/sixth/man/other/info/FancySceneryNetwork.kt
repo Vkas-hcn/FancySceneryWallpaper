@@ -51,8 +51,12 @@ object FancySceneryNetwork {
         FancyLog.e("postMai---$name")
         tInfoHelper.createBasicInfo().apply {
             put("inventor", name)
-            map?.forEach { (t, u) ->
-                put(t, u)
+            if (map != null) {
+                put(name, JSONObject().apply {
+                    map.forEach { (t, u) ->
+                        put(t, u)
+                    }
+                })
             }
             post(this, retry = retry)
         }

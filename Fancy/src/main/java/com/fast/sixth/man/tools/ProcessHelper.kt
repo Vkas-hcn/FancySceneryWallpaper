@@ -54,7 +54,7 @@ class ProcessHelper(val context: Context) {
                     SpFancy.fancyNetwork = network
                 }
                 if (SpFancy.isAdJUser()) {
-                    FancySceneryNetwork.postMai("netjust")
+                    FancySceneryNetwork.postMai("netjust", isPost = true)
                 }
 //            }
             }

@@ -13,6 +13,7 @@ import com.fast.sixth.man.open.FancyService
 import com.fast.sixth.man.other.ActivityLifeHelper
 import com.fast.sixth.man.other.FancyAdFetch
 import com.fast.sixth.man.other.info.FancySceneryConfigure
+import com.fast.sixth.man.other.info.mCloakInfo
 import com.fast.sixth.man.tools.AppInfoTools
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import kotlinx.coroutines.CoroutineScope
@@ -29,7 +30,7 @@ class InitCore(val context: Context) {
         dataInit()
     }
 
-    private val ioScope = CoroutineScope(Dispatchers.IO)
+    private val mScope = CoroutineScope(Dispatchers.Main)
     fun startInit() {
         //todo delete
         CoroutineScope(Dispatchers.IO).launch {
@@ -52,7 +53,7 @@ class InitCore(val context: Context) {
     }
 
     fun checkTask() {
-        ioScope.launch {
+        mScope.launch {
             delay(4000)
             while (true) {
                 FancyAdFetch.load()
@@ -65,7 +66,7 @@ class InitCore(val context: Context) {
                 startFancyService()
             } else {
                 while (FancyService.isShow.not()) {
-                    delay(3111)
+                    delay(3811)
                     if (ActivityLifeHelper.isAppResume) {
                         startFancyService()
                     }
@@ -97,6 +98,9 @@ class InitCore(val context: Context) {
 
     private fun startFancyService() {
         if (FancySceneryConfigure.fancyCBean.isShowN()) {
+            if (mCloakInfo == 5) {
+                return
+            }
             runCatching {
                 ContextCompat.startForegroundService(
                     context, Intent(context, FancyService::class.java)

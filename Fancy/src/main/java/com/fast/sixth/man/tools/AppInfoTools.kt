@@ -91,11 +91,10 @@ object AppInfoTools {
         Pair(50, "Pangle"),
     )
 
-    fun isPhoneClose():Boolean{
+    fun isPhoneO():Boolean{
         with(mApp){
-            return (getSystemService(Context.POWER_SERVICE) as PowerManager).isInteractive && (getSystemService(
-                Context.KEYGUARD_SERVICE
-            ) as KeyguardManager).isDeviceLocked
+            return (getSystemService(Context.POWER_SERVICE) as PowerManager).isInteractive
+                    && (getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager).isDeviceLocked.not()
         }
     }
 

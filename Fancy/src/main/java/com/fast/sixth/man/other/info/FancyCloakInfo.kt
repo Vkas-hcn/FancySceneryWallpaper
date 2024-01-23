@@ -22,7 +22,7 @@ import java.nio.charset.StandardCharsets
  */
 
 // 0 没拿到 5 黑名单 10 白名单
-var mCloakInfo by FIntImpl()
+var mCloakInfo by FIntImpl(0)
 
 class FancyCloakInfo(val context: Context) {
 
@@ -52,16 +52,19 @@ class FancyCloakInfo(val context: Context) {
 
     private fun requestHttp(request: Request) {
         val client = OkHttpClient()
-        val body = client.newCall(request).execute()
-        if (body.isSuccessful && body.code == 200) {
-            val res = body.body?.string()
-            FancyLog.e("res---$res")
-            when (res) {
-                "valhalla" -> {
-                    mCloakInfo = 5
-                }
-                "carven" -> {
-                    mCloakInfo = 10
+        runCatching {
+            val body = client.newCall(request).execute()
+            if (body.isSuccessful && body.code == 200) {
+                val res = body.body?.string()
+                FancyLog.e("res---$res")
+                when (res) {
+                    "valhalla" -> {
+                        mCloakInfo = 5
+                    }
+
+                    "carven" -> {
+                        mCloakInfo = 10
+                    }
                 }
             }
         }

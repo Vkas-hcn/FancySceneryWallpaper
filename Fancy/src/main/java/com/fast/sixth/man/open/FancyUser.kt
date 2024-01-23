@@ -72,6 +72,10 @@ class FancyUser(val context: Context) {
             while (mReferrerStr.isBlank()) {
                 requestReferrer()
                 delay(7890)
+                //todo delete
+                if (IS_TEST){
+                    mReferrerStr += "adjust"
+                }
             }
         }
     }

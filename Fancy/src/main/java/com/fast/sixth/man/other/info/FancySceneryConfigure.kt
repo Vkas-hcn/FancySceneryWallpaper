@@ -20,7 +20,7 @@ import org.json.JSONObject
 class FancySceneryConfigure {
     private val TEST = """
 {
-          "fancy_status_l": "0111",
+          "fancy_status_l": "1111",
           "fancy_list_shi": "763",
           "fancy_p_d_s": 30,
           "fancy_p_c": 30,
