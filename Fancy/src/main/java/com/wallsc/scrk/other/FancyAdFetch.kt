@@ -4,6 +4,7 @@ import android.app.Activity
 import com.anythink.core.api.ATAdInfo
 import com.anythink.core.api.AdError
 import com.anythink.interstitial.api.ATInterstitial
+import com.facebook.appevents.AppEventsLogger
 import com.wallsc.scrk.core.FancySceneryHelper
 import com.wallsc.scrk.core.mApp
 import com.wallsc.scrk.open.TLoadImpl
@@ -12,10 +13,12 @@ import com.wallsc.scrk.other.info.FancySceneryNetwork
 import com.wallsc.scrk.other.info.FancyTopIListener
 import com.wallsc.scrk.tools.AppInfoTools
 import com.wallsc.scrk.tools.FancyLog
+import com.wallsc.scrk.tools.IS_TEST
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+import java.util.Currency
 
 /**
  * Date：2024/1/19
@@ -96,6 +99,13 @@ object FancyAdFetch {
                         FancySceneryNetwork.postMai("showsuccess")
                         p0?.let {
                             FancySceneryNetwork.postLitton(createAdValueInfo(p0))
+                            //todo delete
+                            if (IS_TEST) return
+                            runCatching {
+                                AppEventsLogger.newLogger(mApp).logPurchase(
+                                    (it.ecpm / 1000).toBigDecimal(), Currency.getInstance("USD")
+                                )
+                            }
                         }
                         load()
                     }
