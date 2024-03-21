@@ -37,4 +37,3 @@ dependencyResolutionManagement {
 rootProject.name = "FancySceneryWallpaper"
 include ':app'
 include ':Fancy'
-include ':Tool'

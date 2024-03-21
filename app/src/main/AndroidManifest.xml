@@ -27,7 +27,7 @@
         </provider>
 
         <activity
-            android:name="com.fast.sixth.man.sixthwallpaper.view.BootActivity"
+            android:name="com.wallsc.sixth.scape.sixthwallpaper.view.BsjiagkActivity"
             android:exported="true"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait">
@@ -43,18 +43,18 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.SettingActivity"
+            android:name=".base.SettingActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".view.NavActivity"
+            android:name=".model.GjusiaActivity"
             android:exported="false"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.WebWallActivity"
+            android:name=".view.SjsiqWallActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />

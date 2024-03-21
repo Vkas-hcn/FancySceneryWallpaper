@@ -5,15 +5,16 @@ plugins {
 }
 import com.github.megatronking.stringfog.plugin.kg.RandomKeyGenerator
 import com.github.megatronking.stringfog.plugin.StringFogMode
+
 stringfog {
     implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
     enable true
     kg new RandomKeyGenerator()
     mode StringFogMode.base64
-    fogPackages = ['com.fast.sixth.man']
+    fogPackages = ['com.fast.sixth.man', 'com.JCSiSi.IFiCBnkuxQ']
 }
 android {
-    namespace 'com.fast.sixth.man.sixthwallpaper'
+    namespace 'com.wallsc.sixth.scape.sixthwallpaper'
     compileSdk 34
 
     defaultConfig {

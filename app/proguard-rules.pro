@@ -159,7 +159,7 @@
 -keep class com.my.target.** {*;}
 #top on ad end
 
--keep class com.fast.sixth.man.tools.Cenery{
+-keep class com.wallsc.sixth.scape.tools.Cenery{
 static void a(android.content.Context,java.lang.String,int);
 }
 
