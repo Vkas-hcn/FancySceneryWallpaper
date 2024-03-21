@@ -11,7 +11,7 @@ stringfog {
     enable true
     kg new RandomKeyGenerator()
     mode StringFogMode.base64
-    fogPackages = ['com.fast.sixth.man', 'com.JCSiSi.IFiCBnkuxQ']
+    fogPackages = ['com.wallsc.sixth.scape', 'com.wallsc.scrk']
 }
 android {
     namespace 'com.wallsc.sixth.scape.sixthwallpaper'
@@ -33,7 +33,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

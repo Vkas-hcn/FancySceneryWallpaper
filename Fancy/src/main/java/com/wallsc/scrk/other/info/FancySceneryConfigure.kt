@@ -20,12 +20,11 @@ import org.json.JSONObject
 class FancySceneryConfigure {
     private val TEST = """
 {
-          "fancy_status_l": "0011",
-          "fancy_list_shi": "763",
-          "fancy_p_d_s": 30,
-          "fancy_p_c": 30,
-          "fancy_wa_i": 1,
-          "fancy_s_f_w": 99
+  "scape_status_l": "2111",
+  "scape_list_shi": "736",
+  "scape_p_d_s": 30,
+  "scape_p_c": 30,
+  "scape_wa_i": 1 
 }
     """.trimIndent()
     private val TIME_1 = 1000 * 60 * 65L
@@ -75,21 +74,21 @@ class FancySceneryConfigure {
     private fun refresh() {
         if (IS_TEST) {
             JSONObject(TEST).apply {
-                fancyCBean.statusS = optString("fancy_status_l", "1111")
-                checkPeriodTime = optInt("fancy_p_c", 50) * 1000L
-                fancyCBean.setLInfo(optString("fancy_list_shi", "367"))
-                fancyCBean.firstInstallTime = optInt("fancy_wa_i", 5) * 1000L * 60
-                fancyCBean.showPeriod = optInt("fancy_p_d_s", 40) * 1000
+                fancyCBean.statusS = optString("scape_status_l", "1111")
+                checkPeriodTime = optInt("scape_p_c", 50) * 1000L
+                fancyCBean.setLInfo(optString("scape_list_shi", "367"))
+                fancyCBean.firstInstallTime = optInt("scape_wa_i", 5) * 1000L * 60
+                fancyCBean.showPeriod = optInt("scape_p_d_s", 40) * 1000
             }
         }
         runCatching {
-            val str = Firebase.remoteConfig.getString("fancy_c_wall_scenery")
+            val str = Firebase.remoteConfig.getString("scape_shike_c")
             JSONObject(str).apply {
-                fancyCBean.statusS = optString("fancy_status_l", "1111")
-                checkPeriodTime = optInt("fancy_p_c", 50) * 1000L
-                fancyCBean.setLInfo(optString("fancy_list_shi", "367"))
-                fancyCBean.firstInstallTime = optInt("fancy_wa_i", 5) * 1000L * 60
-                fancyCBean.showPeriod = optInt("fancy_p_d_s", 40) * 1000
+                fancyCBean.statusS = optString("scape_status_l", "1111")
+                checkPeriodTime = optInt("scape_p_c", 50) * 1000L
+                fancyCBean.setLInfo(optString("scape_list_shi", "367"))
+                fancyCBean.firstInstallTime = optInt("scape_wa_i", 5) * 1000L * 60
+                fancyCBean.showPeriod = optInt("scape_p_d_s", 40) * 1000
             }
         }
         runCatching {

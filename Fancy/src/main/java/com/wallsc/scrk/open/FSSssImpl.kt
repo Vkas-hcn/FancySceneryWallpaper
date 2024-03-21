@@ -7,7 +7,7 @@ import kotlin.reflect.KProperty
  * Date：2024/1/18
  * Describe:
  */
-class FSSssImpl(val def: String = "", val tag: String = "Fancy") {
+class FSSssImpl(val def: String = "", val tag: String = "Scape") {
     operator fun getValue(me: Any?, p: KProperty<*>): String {
         return spFancy.getString("$tag-${p.name}", def) ?: def
     }
