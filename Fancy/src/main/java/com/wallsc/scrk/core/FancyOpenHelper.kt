@@ -22,7 +22,7 @@ object FancyOpenHelper {
         if (isReady(mAdFancy)) return
         FancyLog.e("FancyOpenHelper-->load")
         isLoading = true
-        mAdFancy = ATSplashAd(context, "b1faos9g3q2gin", FancyOpenListener()).apply {
+        mAdFancy = ATSplashAd(context, "", FancyOpenListener()).apply {
             loadAd()
         }
     }

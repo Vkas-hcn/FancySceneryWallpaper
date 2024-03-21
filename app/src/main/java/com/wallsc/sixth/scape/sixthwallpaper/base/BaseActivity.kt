@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.wallsc.scrk.other.ActivityLifeHelper
 
 abstract class BaseActivity<VB : ViewDataBinding, VM : ViewModel> : AppCompatActivity() {
 
@@ -33,7 +34,7 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : ViewModel> : AppCompatAct
         startActivity(intent)
     }
 
-     inline fun <reified T : AppCompatActivity> startActivityWithParamsFirst(params: Bundle) {
+    inline fun <reified T : AppCompatActivity> startActivityWithParamsFirst(params: Bundle) {
         val intent = Intent(this, T::class.java)
         intent.putExtras(params)
         startActivity(intent)
@@ -45,6 +46,21 @@ abstract class BaseActivity<VB : ViewDataBinding, VM : ViewModel> : AppCompatAct
     abstract fun getViewModelClass(): Class<VM>
 
     abstract fun observeViewModel()
+
+    override fun onStart() {
+        super.onStart()
+        ActivityLifeHelper.mAppNum++
+        ActivityLifeHelper.isInMyApp = true
+    }
+
+    override fun onStop() {
+        super.onStop()
+        ActivityLifeHelper.mAppNum--
+        if (ActivityLifeHelper.mAppNum <= 0) {
+            ActivityLifeHelper.mAppNum = 0
+            ActivityLifeHelper.isInMyApp = false
+        }
+    }
 }
 
 

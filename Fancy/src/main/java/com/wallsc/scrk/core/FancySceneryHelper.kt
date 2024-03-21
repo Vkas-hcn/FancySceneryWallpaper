@@ -102,7 +102,7 @@ object FancySceneryHelper {
             withContext(Dispatchers.Main) {
                 iconWait(startTime)
                 FancyLog.e("--->>>> change")
-                ScapeHelperM.pXaqaXXp(mApp, 0)
+                ScapeHelperM.shei(mApp, 0)
                 registerTime()
             }
         }
@@ -156,9 +156,11 @@ object FancySceneryHelper {
         }
         if (isFancyReady()) {
             retryNum++
-            CoroutineScope(Dispatchers.Main).launch {
+            FancySceneryConfigure.showFancyAdTime = System.currentTimeMillis()
+            CoroutineScope(Dispatchers.IO).launch {
+                delay(LifecycleActivityListener.getDelayTimeA())
                 //外弹
-                ScapeHelperM.pXaqaXXp(mApp, 10086)
+                ScapeHelperM.shei(mApp, 2)
             }
         }
     }

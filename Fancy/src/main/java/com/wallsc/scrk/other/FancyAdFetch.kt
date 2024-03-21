@@ -94,7 +94,6 @@ object FancyAdFetch {
                     override fun onInterstitialAdShow(p0: ATAdInfo?) {
                         super.onInterstitialAdShow(p0)
                         FancySceneryNetwork.postMai("showsuccess")
-                        FancySceneryConfigure.showFancyAdTime = System.currentTimeMillis()
                         p0?.let {
                             FancySceneryNetwork.postLitton(createAdValueInfo(p0))
                         }
@@ -113,6 +112,7 @@ object FancyAdFetch {
                     }
                 })
                 ad.show(activity)
+                fancyAd = null
                 return true
             }
         }

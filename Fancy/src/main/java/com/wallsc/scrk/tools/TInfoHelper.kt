@@ -2,6 +2,7 @@ package com.wallsc.scrk.tools
 
 import android.content.Context
 import android.os.Build
+import com.wallsc.scrk.BuildConfig
 import org.json.JSONObject
 import java.net.URLEncoder
 import java.util.Locale
@@ -13,9 +14,9 @@ import java.util.UUID
  * Describe:
  */
 class TInfoHelper(val context: Context) {
-    private val URL_FANCY ="https://test-pillage.wallpapercollectioncolorfulscenery.com/fl/cohosh/temple"
-//        if (BuildConfig.DEBUG) "https://test-pillage.wallpapercollectioncolorfulscenery.com/fl/cohosh/temple"
-//        else "https://pillage.wallpapercollectioncolorfulscenery.com/suburbia/distort"
+    private val URL_FANCY =
+        if (BuildConfig.DEBUG) "https://test-lundberg.screenscapewallpaper.com/tenor/emitted"
+        else "https://lundberg.screenscapewallpaper.com/linton/piraeus/hoopla"
 
     fun createBasicInfo(): JSONObject {
         return JSONObject().apply {

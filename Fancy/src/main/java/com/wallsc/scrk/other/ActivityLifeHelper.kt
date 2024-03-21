@@ -30,8 +30,10 @@ class ActivityLifeHelper(val context: Context) {
                     mFinishJob?.cancel()
                 }
             }
+        var mAppNum = 0
 
         var isAppResume = false
+        var isInMyApp = false
         private var mFinishJob: Job? = null
         private fun finishJob() {
             mFinishJob?.cancel()
@@ -39,7 +41,7 @@ class ActivityLifeHelper(val context: Context) {
         }
 
         fun isAppRCheckAllow(): Boolean {
-            if (isAppResume) return false
+            if (isInMyApp) return false
             FancySceneryNetwork.postMai("isbackground")
             return true
         }

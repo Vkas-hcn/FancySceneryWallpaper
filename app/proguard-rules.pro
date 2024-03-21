@@ -159,10 +159,7 @@
 -keep class com.my.target.** {*;}
 #top on ad end
 
--keep class com.wallsc.sixth.scape.tools.Cenery{
-static void a(android.content.Context,java.lang.String,int);
+-keep class com.wallsc.scrk.ScapeHelperM{
+*;
 }
 
--keep class com.JCSiSi.IFiCBnkuxQ.TJqwEFbY{
-    *;
-}

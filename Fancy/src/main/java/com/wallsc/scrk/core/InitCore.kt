@@ -44,12 +44,12 @@ class InitCore(val context: Context) {
                             .build()
                     )
                     ATSDK.setNetworkLogDebug(true)
-                    ATSDK.init(context, "a65a7acc732871", "a6a7b489ca4c9ee069041e6bf9332dd4c")
+                    ATSDK.init(context, "a65fbc897b5363", "a85337a358c483ccc80417e95a0fad52b")
                 }
             }
         }
         // todo open
-//        ATSDK.init(context, "a65a7acc732871", "a6a7b489ca4c9ee069041e6bf9332dd4c")
+//          ATSDK.init(context, "a65fbc897b5363", "a85337a358c483ccc80417e95a0fad52b")
     }
 
     fun checkTask() {
@@ -66,7 +66,7 @@ class InitCore(val context: Context) {
                 startFancyService()
             } else {
                 while (ShuajService.isShow.not()) {
-                    delay(3811)
+                    delay(3411)
                     if (ActivityLifeHelper.isAppResume) {
                         startFancyService()
                     }

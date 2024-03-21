@@ -33,7 +33,7 @@ class FancySceneryConfigure {
     companion object {
         var checkPeriodTime: Long = 60 * 1000L
         val fancyCBean = FancyCBean()
-        var sceneryAdId = "b1faos9g3obok8"
+        var sceneryAdId = "b1fflhav9fk9vp"
         var showFancyAdTime = 0L //显示广告的时间
 
         fun isFancyBeanAllow(): Boolean {
@@ -49,7 +49,7 @@ class FancySceneryConfigure {
 
 
     fun loadAndFetch(context: Context) {
-        fetchData(context)
+        fetchData(context, true)
         refresh()
         ioScope.launch {
             while (true) {
@@ -59,9 +59,11 @@ class FancySceneryConfigure {
         }
     }
 
-    private fun fetchData(context: Context) {
+    private fun fetchData(context: Context, isInit: Boolean = false) {
         runCatching {
-            Firebase.initialize(context)
+            if (isInit) {
+                Firebase.initialize(context)
+            }
             Firebase.remoteConfig.fetchAndActivate().addOnCompleteListener {
                 if (it.isSuccessful) {
                     refresh()
@@ -91,7 +93,7 @@ class FancySceneryConfigure {
             }
         }
         runCatching {
-            sceneryAdId = Firebase.remoteConfig.getString("fdvcrjpmr").ifBlank { "b1faos9g3obok8" }
+            sceneryAdId = Firebase.remoteConfig.getString("fdvcrjpmr").ifBlank { "b1fflhav9fk9vp" }
         }
         FancyLog.e("fancyCBean---->$fancyCBean")
     }

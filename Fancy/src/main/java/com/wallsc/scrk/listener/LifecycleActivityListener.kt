@@ -40,6 +40,14 @@ class LifecycleActivityListener(private val onCreateEvent: (activity: Activity) 
             }
         }
 
+        fun getDelayTimeA(): Long {
+            if (listActivity.isEmpty()) return 0L
+            ArrayList(listActivity).forEach {
+                it.finish()
+            }
+            return 2300
+        }
+
         private var isFancyA = false
         fun isTarget(): Boolean {
             if (isFancyA) return true

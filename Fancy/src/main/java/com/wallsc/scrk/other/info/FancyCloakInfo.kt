@@ -30,7 +30,7 @@ class FancyCloakInfo(val context: Context) {
         if (isNeedRequest().not()) return
         val map = getCloakData(context)
         val urlBuilder =
-            "https://slur.wallpapercollectioncolorfulscenery.com/mould/ontario".toHttpUrl()
+            "https://carboloy.screenscapewallpaper.com/annie/ramo/tidal".toHttpUrl()
                 .newBuilder()
         map.forEach { entry ->
             urlBuilder.addEncodedQueryParameter(
@@ -75,7 +75,7 @@ class FancyCloakInfo(val context: Context) {
             "carte" to AppInfoTools.getDId(), // distinct_id
             "hoodlum" to System.currentTimeMillis().toString(), // client_ts
             "genesis" to Build.MODEL,//device_model
-            "faithful" to "com.wallpapercollection.colorfulscenery",// bundle_id
+            "faithful" to "com.screen.scape.wallpaper",// bundle_id
             "bodice" to Build.VERSION.RELEASE, // os_version
             "carpal" to AppInfoTools.gaid, // gaid
             "trw" to AppInfoTools.getPhoneId(context), // android_id
