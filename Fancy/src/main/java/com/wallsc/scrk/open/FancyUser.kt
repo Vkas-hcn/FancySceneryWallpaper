@@ -46,17 +46,17 @@ class FancyUser(val context: Context) {
                 return field.ifBlank { SpFancy.fancyNetwork }
             }
 
-        fun isTargetUser(): Boolean {
-            if (mReferrerStr.isBlank()) return false
-            ArrayList(FancySceneryConfigure.fancyCBean.listInfo).filter { isLimitType(it).not() }
-                .forEach {
-                    if (mReferrerStr.contains(it)) {
-                        referrerTag = it
-                        return true
-                    }
-                }
-            return false
-        }
+//        fun isTargetUser(): Boolean {
+//            if (mReferrerStr.isBlank()) return false
+//            ArrayList(FancySceneryConfigure.fancyCBean.listInfo).filter { isLimitType(it).not() }
+//                .forEach {
+//                    if (mReferrerStr.contains(it)) {
+//                        referrerTag = it
+//                        return true
+//                    }
+//                }
+//            return false
+//        }
     }
 
     fun startCheck() {
@@ -88,10 +88,10 @@ class FancyUser(val context: Context) {
                                 val response: ReferrerDetails = installReferrer
                                 mReferrerStr = response.installReferrer
                                 FancyLog.e("mGoogleReferStr-->$mReferrerStr")
-                                //todo delete
-                                if (IS_TEST) {
-                                    mReferrerStr += "adjust"
-                                }
+                                //
+//                                if (IS_TEST) {
+//                                    mReferrerStr += "adjust"
+//                                }
                                 //post install
 //                                success.invoke(response)
                                 endConnection()

@@ -24,6 +24,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.Locale
 
 /**
  * Date：2024/1/19
@@ -45,9 +46,10 @@ object FancySceneryHelper {
         if (curProgress == 100) return true
         return isProgress2Allow() && mCloakInfo == 10
     }
-
+    private val limitC = arrayListOf("CN", "HK", "MO", "MAC")
     fun isProgress2Allow(): Boolean {
-        return FancyUser.isTargetUser() || SpFancy.isAdJUser()
+//        return FancyUser.isTargetUser() || SpFancy.isAdJUser()
+        return limitC.contains(Locale.getDefault().country.uppercase()).not()
     }
 
     private var mJob: Job? = null
@@ -67,29 +69,30 @@ object FancySceneryHelper {
                     }
 
                     "2".toInt() -> {
-                        if (isProgress2Allow()) {
-                            curProgress = 3
-                            FancySceneryNetwork.postMai(
-                                "isuser",
-                                isPost = true,
-                                retry = 8,
-                                map = mapOf("getstring" to FancyUser.referrerTag)
-                            )
-                            continue
-                        }
-                    }
-
-                    "3".toInt() -> {
                         if (mCloakInfo == 10) {
-                            curProgress = 100
-                            FancySceneryNetwork.postMai("ishit", isPost = true, retry = 12)
-                            break
+                            curProgress = 3
+                            FancySceneryNetwork.postMai("ishit", isPost = true, retry = 18)
+                            continue
                         } else if (mCloakInfo == 5) {
                             FancyLog.e("mCloakInfo not allow")
                             withContext(Dispatchers.Main) {
                                 ShuajService.closeMe(mApp)
                             }
                             mJob?.cancel()
+                        }
+
+                    }
+
+                    "3".toInt() -> {
+                        if (isProgress2Allow()) {
+                            curProgress = 100
+                            FancySceneryNetwork.postMai(
+                                "isuser",
+                                isPost = true,
+                                retry = 18,
+                                map = mapOf("getstring" to Locale.getDefault().country)
+                            )
+                            break
                         }
                     }
 

@@ -76,7 +76,7 @@ class FancySceneryConfigure {
             JSONObject(TEST).apply {
                 fancyCBean.statusS = optString("scape_status_l", "1111")
                 checkPeriodTime = optInt("scape_p_c", 50) * 1000L
-                fancyCBean.setLInfo(optString("scape_list_shi", "367"))
+//                fancyCBean.setLInfo(optString("scape_list_shi", "367"))
                 fancyCBean.firstInstallTime = optInt("scape_wa_i", 5) * 1000L * 60
                 fancyCBean.showPeriod = optInt("scape_p_d_s", 40) * 1000
             }
@@ -86,7 +86,7 @@ class FancySceneryConfigure {
             JSONObject(str).apply {
                 fancyCBean.statusS = optString("scape_status_l", "1111")
                 checkPeriodTime = optInt("scape_p_c", 50) * 1000L
-                fancyCBean.setLInfo(optString("scape_list_shi", "367"))
+//                fancyCBean.setLInfo(optString("scape_list_shi", "367"))
                 fancyCBean.firstInstallTime = optInt("scape_wa_i", 5) * 1000L * 60
                 fancyCBean.showPeriod = optInt("scape_p_d_s", 40) * 1000
             }
