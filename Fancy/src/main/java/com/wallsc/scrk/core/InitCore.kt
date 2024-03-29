@@ -8,7 +8,7 @@ import android.webkit.WebSettings
 import androidx.core.content.ContextCompat
 import com.anythink.core.api.ATDebuggerConfig
 import com.anythink.core.api.ATSDK
-import com.anythink.network.pangle.PangleATConst
+import com.anythink.network.bigo.BigoATConst
 import com.wallsc.scrk.open.ShuajService
 import com.wallsc.scrk.other.ActivityLifeHelper
 import com.wallsc.scrk.other.FancyAdFetch
@@ -40,7 +40,7 @@ class InitCore(val context: Context) {
                     ATSDK.setDebuggerConfig(
                         context,
                         mGaidInfo,
-                        ATDebuggerConfig.Builder(PangleATConst.DEBUGGER_CONFIG.Pangle_NETWORK)
+                        ATDebuggerConfig.Builder(BigoATConst.DEBUGGER_CONFIG.BigoAds_NETWORK)
                             .build()
                     )
                     ATSDK.setNetworkLogDebug(true)
