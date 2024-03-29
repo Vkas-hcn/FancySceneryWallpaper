@@ -57,16 +57,16 @@
             android:taskAffinity="scape.info.post"
             android:theme="@style/ScapeTheme" />
 
-        <activity
-            android:name="com.yandex.mobile.ads.common.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_scopr_icon"
-            android:label="@string/siakwquasgs"
-            android:roundIcon="@drawable/ic_scopr_icon"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/MonetizationAdsInternal.AdActivity" />
+<!--        <activity-->
+<!--            android:name="com.yandex.mobile.ads.common.AdActivity"-->
+<!--            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:icon="@drawable/ic_scopr_icon"-->
+<!--            android:label="@string/siakwquasgs"-->
+<!--            android:roundIcon="@drawable/ic_scopr_icon"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/MonetizationAdsInternal.AdActivity" />-->
 
         <activity
             android:name="sg.bigo.ads.api.AdActivity"
@@ -208,17 +208,17 @@
             android:taskAffinity="scape.info.post"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:icon="@drawable/ic_scopr_icon"
-            android:label="@string/siakwquasgs"
-            android:launchMode="standard"
-            android:roundIcon="@drawable/ic_scopr_icon"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_full_screen_new" />
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardVideoActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:icon="@drawable/ic_scopr_icon"-->
+<!--            android:label="@string/siakwquasgs"-->
+<!--            android:launchMode="standard"-->
+<!--            android:roundIcon="@drawable/ic_scopr_icon"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_full_screen_new" />-->
 
         <activity
             android:name="com.applovin.adview.AppLovinFullscreenActivity"
@@ -291,106 +291,106 @@
             android:theme="@android:style/Theme.NoTitleBar"
             tools:ignore="UnusedAttribute" />
 
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_full_screen_new" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_full_screen_new" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_full_screen_new" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_full_screen_interaction" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialExpressActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_full_screen_interaction" />
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTRewardExpressVideoActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_full_screen_new" />-->
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenVideoActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_full_screen_new" />-->
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTFullScreenExpressVideoActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_full_screen_new" />-->
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_full_screen_interaction" />-->
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTInterstitialExpressActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_full_screen_interaction" />-->
 
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_landing_page" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_landing_page" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@style/tt_landing_page" />
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTLandingPageActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_landing_page" />-->
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTPlayableLandingPageActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_landing_page" />-->
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTVideoLandingPageLink2Activity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@style/tt_landing_page" />-->
 
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"
-            android:excludeFromRecents="true"
-            android:finishOnCloseSystemDialogs="true"
-            android:launchMode="standard"
-            android:taskAffinity="scape.info.post"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+<!--        <activity-->
+<!--            android:name="com.bytedance.sdk.openadsdk.activity.TTDelegateActivity"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:launchMode="standard"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
 
-        <activity
-            android:name="com.appnext.ads.interstitial.InterstitialActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:finishOnCloseSystemDialogs="true"
-            android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_scopr_icon"
-            android:label="@string/siakwquasgs"
-            android:multiprocess="true"
-            android:roundIcon="@drawable/ic_scopr_icon"
-            android:taskAffinity="scape.info.post"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<!--        <activity-->
+<!--            android:name="com.appnext.ads.interstitial.InterstitialActivity"-->
+<!--            android:configChanges="keyboardHidden|orientation|screenSize"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:exported="false"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:hardwareAccelerated="true"-->
+<!--            android:icon="@drawable/ic_scopr_icon"-->
+<!--            android:label="@string/siakwquasgs"-->
+<!--            android:multiprocess="true"-->
+<!--            android:roundIcon="@drawable/ic_scopr_icon"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
 
-        <activity
-            android:name="com.appnext.ads.fullscreen.FullscreenActivity"
-            android:excludeFromRecents="true"
-            android:exported="false"
-            android:finishOnCloseSystemDialogs="true"
-            android:hardwareAccelerated="true"
-            android:icon="@drawable/ic_scopr_icon"
-            android:label="@string/siakwquasgs"
-            android:multiprocess="true"
-            android:roundIcon="@drawable/ic_scopr_icon"
-            android:taskAffinity="scape.info.post"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<!--        <activity-->
+<!--            android:name="com.appnext.ads.fullscreen.FullscreenActivity"-->
+<!--            android:excludeFromRecents="true"-->
+<!--            android:exported="false"-->
+<!--            android:finishOnCloseSystemDialogs="true"-->
+<!--            android:hardwareAccelerated="true"-->
+<!--            android:icon="@drawable/ic_scopr_icon"-->
+<!--            android:label="@string/siakwquasgs"-->
+<!--            android:multiprocess="true"-->
+<!--            android:roundIcon="@drawable/ic_scopr_icon"-->
+<!--            android:taskAffinity="scape.info.post"-->
+<!--            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />-->
 
         <provider
             android:name="com.anythink.core.provider.AnythinkSpProvider"

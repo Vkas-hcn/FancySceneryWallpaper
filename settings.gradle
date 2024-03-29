@@ -32,6 +32,14 @@ dependencyResolutionManagement {
         maven {
             url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
         }
+
+        //Chartboost
+        maven {
+            url "https://cboost.jfrog.io/artifactory/chartboost-ads"
+        }
+        maven {
+            url "https://cboost.jfrog.io/artifactory/chartboost-mediation"
+        }
     }
 }
 rootProject.name = "FancySceneryWallpaper"

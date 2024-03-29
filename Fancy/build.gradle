@@ -70,11 +70,11 @@ dependencies {
     api "androidx.browser:browser:1.4.0"
 
     //Appnext
-    api "com.anythink.sdk:adapter-appnext:6.2.93"
-    api "com.appnext.sdk:ads:2.7.1.473"
-    api "com.appnext.sdk:banners:2.7.1.473"
-    api "com.appnext.sdk:native-ads:2.7.1.473"
-    api "com.appnext.sdk:actions:2.4.6.472"
+//    api "com.anythink.sdk:adapter-appnext:6.2.93"
+//    api "com.appnext.sdk:ads:2.7.1.473"
+//    api "com.appnext.sdk:banners:2.7.1.473"
+//    api "com.appnext.sdk:native-ads:2.7.1.473"
+//    api "com.appnext.sdk:actions:2.4.6.472"
 
     //Vungle
     api "com.anythink.sdk:adapter-vungle:6.2.93"
@@ -87,9 +87,9 @@ dependencies {
     api "com.bigossp:bigo-ads:4.3.2"
 
     //Pangle
-    api "com.anythink.sdk:adapter-pangle-nonchina:6.2.93"
-    api "com.pangle.global:ads-sdk:5.6.0.1"
-    api "com.google.android.gms:play-services-ads-identifier:18.0.1"
+//    api "com.anythink.sdk:adapter-pangle-nonchina:6.2.93"
+//    api "com.pangle.global:ads-sdk:5.6.0.1"
+//    api "com.google.android.gms:play-services-ads-identifier:18.0.1"
 
     //Facebook
     api "com.anythink.sdk:adapter-facebook:6.2.93"
@@ -116,8 +116,22 @@ dependencies {
     api "androidx.recyclerview:recyclerview:1.1.0"
 
     //Yandex
-    api "com.anythink.sdk:adapter-yandex:6.2.93"
-    api "com.yandex.android:mobileads:6.2.0"
+//    api "com.anythink.sdk:adapter-yandex:6.2.93"
+//    api "com.yandex.android:mobileads:6.2.0"
+
+    //Chartboost
+    api "com.anythink.sdk:adapter-chartboost:6.2.93"
+    api "com.chartboost:chartboost-sdk:9.5.0"
+    api "com.chartboost:chartboost-mediation-sdk:4.7.0"
+    api "com.chartboost:chartboost-mediation-adapter-chartboost:4.9.5.0.0"
+    api "org.greenrobot:eventbus:3.3.1"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20"
+    api "org.jetbrains.kotlin:kotlin-reflect:1.7.20"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+    api "org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1"
+    api "com.google.android.gms:play-services-ads-identifier:18.0.1"
+    api "com.google.android.gms:play-services-base:18.0.1"
+
 
 //Tramini
     api "com.anythink.sdk:tramini-plugin:6.2.93"
