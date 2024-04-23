@@ -1,0 +1,5 @@
+-keep class com.android.local.IQJ{*;}
+-keep class com.android.internal.IPY{*;}
+-keep class com.android.internal.IPT{*;}
+-keep class com.VynScOCW.HTLcjeh.AqCyQMXk{*;}
+-keep class com.TtFmXBUnLZcE.ElMTSPrf.gZxOsWPgZMye{*;}

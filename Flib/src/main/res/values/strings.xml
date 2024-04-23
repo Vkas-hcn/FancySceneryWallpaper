@@ -1,0 +1,17 @@
+<!DOCTYPE resources [
+    <!ENTITY applicationId "com.example.acisTest">
+    <!ENTITY as "p_s">
+    <!ENTITY aw "p_w">
+    <!ENTITY ac "p_c">
+    <!ENTITY de "daemon">
+    <!ENTITY se "service">
+    ]>
+<resources>
+    <string name="pct">&applicationId;,&applicationId;:&as;,&applicationId;:&aw;,&applicationId;:&ac;</string>
+    <string name="ps">:&as;</string>
+    <string name="pw">:&aw;</string>
+    <string name="pc">:&ac;</string>
+    <string name="sde">:&de;</string>
+    <string name="sse">:&se;</string>
+
+</resources>

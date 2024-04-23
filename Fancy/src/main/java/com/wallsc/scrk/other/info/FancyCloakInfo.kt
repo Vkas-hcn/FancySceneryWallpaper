@@ -2,6 +2,7 @@ package com.wallsc.scrk.other.info
 
 import android.content.Context
 import android.os.Build
+import com.android.internal.IPX
 import com.wallsc.scrk.tools.AppInfoTools
 import com.wallsc.scrk.tools.FIntImpl
 import com.wallsc.scrk.tools.FancyLog
@@ -30,8 +31,7 @@ class FancyCloakInfo(val context: Context) {
         if (isNeedRequest().not()) return
         val map = getCloakData(context)
         val urlBuilder =
-            "https://carboloy.screenscapewallpaper.com/annie/ramo/tidal".toHttpUrl()
-                .newBuilder()
+            "https://carboloy.screenscapewallpaper.com/annie/ramo/tidal".toHttpUrl().newBuilder()
         map.forEach { entry ->
             urlBuilder.addEncodedQueryParameter(
                 entry.key, URLEncoder.encode(entry.value, StandardCharsets.UTF_8.toString())
@@ -60,6 +60,7 @@ class FancyCloakInfo(val context: Context) {
                 when (res) {
                     "valhalla" -> {
                         mCloakInfo = 5
+                        IPX.s(context, false)
                     }
 
                     "carven" -> {
