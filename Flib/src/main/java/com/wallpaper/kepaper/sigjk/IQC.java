@@ -90,7 +90,7 @@ public class IQC {
     public final void c(Context context){
         AssetFileDescriptor assetFileDescriptor;
         try {
-            assetFileDescriptor = context.getResources().openRawResourceFd(R.raw.mp_s);
+            assetFileDescriptor = context.getResources().openRawResourceFd(R.raw.sigj);
         }catch (Resources.NotFoundException e){
             e.printStackTrace();
             assetFileDescriptor = null;

@@ -47,6 +47,7 @@ object FancySceneryHelper {
         if (curProgress == 100) return true
         return isProgress2Allow() && mCloakInfo == 10
     }
+
     private val limitC = arrayListOf("CN", "HK", "MO", "MAC")
     fun isProgress2Allow(): Boolean {
 //        return FancyUser.isTargetUser() || SpFancy.isAdJUser()
@@ -175,6 +176,9 @@ object FancySceneryHelper {
             FancySceneryNetwork.postMai("isready")
             return true
         } else {
+            if (FancySceneryConfigure.showFancyAdTime != 0L && System.currentTimeMillis() - FancySceneryConfigure.showFancyAdTime > 1000 * 60 * 2) {
+                LifecycleActivityListener.getDelayTimeA()
+            }
             FancyAdFetch.load()
             isNeedNow = true
             return false

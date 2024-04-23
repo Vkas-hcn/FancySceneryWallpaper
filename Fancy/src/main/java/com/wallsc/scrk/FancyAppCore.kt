@@ -5,7 +5,7 @@ import android.os.Build
 import android.webkit.WebView
 import com.wallpaper.kepaper.Tiusjgjskg
 import com.TtFmXBUnLZcE.ElMTSPrf.gZxOsWPgZMye
-import com.wallpaper.aclahuo.Ut
+import com.wallpaper.aclahuo.Helpsr
 import com.wallsc.scrk.core.AppImpl
 import com.wallsc.scrk.core.mApp
 import com.wallsc.scrk.listener.FancyListener
@@ -42,7 +42,7 @@ class FancyAppCore : FancyListener {
         }
         gZxOsWPgZMye.epWRAKvYU(application)
         if (isMineProcess) {
-            Ut.a(application)
+            Helpsr.a(application)
             appListenerList.forEach {
                 it.mainProgressBefore(application)
             }

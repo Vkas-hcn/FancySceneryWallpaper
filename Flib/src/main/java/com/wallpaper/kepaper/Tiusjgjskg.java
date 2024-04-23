@@ -14,9 +14,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.wallpaper.kepaper.sigjk.IPI;
+import com.wallpaper.kepaper.sigjk.QUeiwjgksdg;
 import com.TtFmXBUnLZcE.ElMTSPrf.gZxOsWPgZMye;
-import com.wallpaper.qudigks.IQI;
+import com.wallpaper.qudigks.Queisjg;
 
 import com.wallpaper.qudigks.Contants;
 
@@ -33,7 +33,7 @@ import java.util.concurrent.TimeUnit;
  **/
 public class Tiusjgjskg {
 
-    public static IPZ f27340a;
+    public static Queusijgksmjxnjgsd f27340a;
     public static String f27324d;
     public static String f27325e;
     public static Account f27321a;
@@ -42,16 +42,16 @@ public class Tiusjgjskg {
     public static void b(Context context){
         if(g()){
             gZxOsWPgZMye.ZOeOsisG(context);
-            IPN bVar = new IPN(context);
+            EWUij bVar = new EWUij(context);
             a(bVar);
             b(bVar);
             c(bVar);
-            IPI.b(bVar);
+            QUeiwjgksdg.b(bVar);
            // IQB.a(context);
         }
     }
     // 账号保活
-    private static void a(IPN bVar){
+    private static void a(EWUij bVar){
         if (TextUtils.equals(bVar.f27328c, bVar.f27330e)){
             try {
                 String f27322b = "account_label";
@@ -115,7 +115,7 @@ public class Tiusjgjskg {
         }
     }
 
-    private static void b(IPN bVar){
+    private static void b(EWUij bVar){
         if (!TextUtils.equals(bVar.f27328c, bVar.f27330e) || Build.VERSION.SDK_INT < 21) {
             return;
         }
@@ -126,48 +126,48 @@ public class Tiusjgjskg {
         }
     }
 
-    private static void c(IPN bVar){
-        IPZ aVar;
+    private static void c(EWUij bVar){
+        Queusijgksmjxnjgsd aVar;
         if (bVar.e() && f27340a == null){
             try {
-                IPZ.b bVar2 = new IPZ.b(bVar.f27326a);
+                Queusijgksmjxnjgsd.b bVar2 = new Queusijgksmjxnjgsd.b(bVar.f27326a);
                 bVar2.f27355a = bVar.f27328c;
                 bVar2.f27356b = bVar2.f27355a + ":" + Contants.Pservice;
                 bVar2.f27357c = bVar2.f27355a + ":" + Contants.Pworker;
                 bVar2.f27358d = bVar2.f27355a + ":" + Contants.Pchannel;
-                bVar2.f27371h = new Intent().setClassName(bVar.f27328c, IPL.class.getName());//add
-                bVar2.f27360f = new Intent().setClassName(bVar.f27328c, IPV.class.getName());
-                bVar2.f27359e = new Intent().setClassName(bVar.f27328c, IPG.class.getName());
-                bVar2.f27361g = new Intent().setClassName(bVar.f27328c, IPH.class.getName()).setPackage(bVar.f27328c);
-                bVar2.f27365k = new IPS();
+                bVar2.f27371h = new Intent().setClassName(bVar.f27328c, Wusjgikllag.class.getName());//add
+                bVar2.f27360f = new Intent().setClassName(bVar.f27328c, Quiejskgdsd.class.getName());
+                bVar2.f27359e = new Intent().setClassName(bVar.f27328c, Qyeuwsigjsk.class.getName());
+                bVar2.f27361g = new Intent().setClassName(bVar.f27328c, Qyeuwisjgsk.class.getName()).setPackage(bVar.f27328c);
+                bVar2.f27365k = new Queisjkgisd();
                 aVar = bVar2.a();
             }catch (Exception e){
                 aVar = null;
             }
             f27340a = aVar;
-            IPZ aVar2 = f27340a;
+            Queusijgksmjxnjgsd aVar2 = f27340a;
             if (aVar2 != null){
                 if (aVar2.f27344a.equals(bVar.f27330e))
                 {
-                    IQA.a(bVar.f27326a);
-                    IPW.a(bVar.f27326a);
+                    Queisjgksdnjxmgd.a(bVar.f27326a);
+                    QUeisjkgs.a(bVar.f27326a);
                 }
                 if (f27340a.f27344a.equals(bVar.f27330e) || f27340a.f27345b.equalsIgnoreCase(bVar.f27330e)) {
-                    IPZ aVar3 = f27340a;
+                    Queusijgksmjxnjgsd aVar3 = f27340a;
                     aVar3.f27354k.a(bVar.f27326a, aVar3.f27345b);
-                    IPZ aVar4 = f27340a;
+                    Queusijgksmjxnjgsd aVar4 = f27340a;
                     aVar4.f27354k.a(bVar.f27326a, aVar4.f27346c);
-                    IPZ aVar5 = f27340a;
+                    Queusijgksmjxnjgsd aVar5 = f27340a;
                     aVar5.f27354k.a(bVar.f27326a, aVar5.f27347d);
                 }
                 if (f27340a.f27345b.equals(bVar.f27330e)) {
-                    IPU.a(Contants.Pservice, Contants.Pworker, Contants.Pchannel);
+                    Qeuisjgikoks.a(Contants.Pservice, Contants.Pworker, Contants.Pchannel);
                 }
                 if (f27340a.f27346c.equals(bVar.f27330e)) {
-                    IPU.a(Contants.Pworker, Contants.Pservice, Contants.Pchannel);
+                    Qeuisjgikoks.a(Contants.Pworker, Contants.Pservice, Contants.Pchannel);
                 }
                 if (f27340a.f27347d.equals(bVar.f27330e)) {
-                    IPU.a(Contants.Pchannel, Contants.Pservice, Contants.Pworker);
+                    Qeuisjgikoks.a(Contants.Pchannel, Contants.Pservice, Contants.Pworker);
                 }
 
             }
@@ -179,7 +179,7 @@ public class Tiusjgjskg {
     @TargetApi(21)
     private static void a(Context context, int i2) {
         JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
-        JobInfo.Builder builder = new JobInfo.Builder(1000, new ComponentName(context.getPackageName(), IPC.class.getName()));
+        JobInfo.Builder builder = new JobInfo.Builder(1000, new ComponentName(context.getPackageName(), Qyuweijsgs.class.getName()));
         builder.setPersisted(true);
         builder.setPeriodic(TimeUnit.SECONDS.toMillis((long) i2));
         jobScheduler.cancel(1000);
@@ -194,7 +194,7 @@ public class Tiusjgjskg {
         ((JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE)).cancel(1000);
     }
 
-    public static IPZ a() {
+    public static Queusijgksmjxnjgsd a() {
         return f27340a;
     }
 
@@ -212,7 +212,7 @@ public class Tiusjgjskg {
             String dataSavePath = Contants.Bf;
             File dataFile = new File(dataSavePath);
             if (status) {
-                IQI data = new IQI();
+                Queisjg data = new Queisjg();
                 data.setData("");
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(dataFile));
                 objectOutputStream.writeObject(data);

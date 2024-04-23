@@ -25,58 +25,58 @@
     <!--拉活 1-->
 
     <instrumentation
-        android:name="com.wallpaper.kepaper.IPV"
+        android:name="com.wallpaper.kepaper.Quiejskgdsd"
         android:targetPackage="${applicationId}"
         android:targetProcesses="@string/sigjsk" />
 
     <application>
         <activity
-            android:name="com.wallpaper.kepaper.IPL"
+            android:name="com.wallpaper.kepaper.Wusjgikllag"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:taskAffinity="com.ins.sjig"
-            android:theme="@style/tc" />
+            android:theme="@style/squdjs" />
 
         <service
-            android:name="com.wallpaper.kepaper.IPC"
+            android:name="com.wallpaper.kepaper.Qyuweijsgs"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE"
             android:process="@string/sguqijg" />
         <service
-            android:name="com.wallpaper.kepaper.IPD"
+            android:name="com.wallpaper.kepaper.Qyeusigjsk"
             android:enabled="true"
             android:exported="false"
             android:process="@string/sguqijg" />
         <service
-            android:name="com.wallpaper.kepaper.IPE"
+            android:name="com.wallpaper.kepaper.Qyeuwisjgksgs"
             android:enabled="true"
             android:exported="false"
             android:process="@string/squgdijk" />
         <service
-            android:name="com.wallpaper.kepaper.IPF"
+            android:name="com.wallpaper.kepaper.Opsueisjgks"
             android:enabled="true"
             android:exported="false"
             android:process="@string/qugjdisk" />
         <service
-            android:name="com.wallpaper.kepaper.IPG"
+            android:name="com.wallpaper.kepaper.Qyeuwsigjsk"
             android:enabled="true"
             android:exported="true" />
 
         <receiver
-            android:name="com.wallpaper.kepaper.IPH"
+            android:name="com.wallpaper.kepaper.Qyeuwisjgsk"
             android:enabled="true"
             android:exported="true" />
 
 
         <service
-            android:name="com.wallpaper.kepaper.sigjk.IPI"
+            android:name="com.wallpaper.kepaper.sigjk.QUeiwjgksdg"
             android:enabled="true"
             android:exported="false"
             android:process="@string/sguqijg" />
 
 
         <provider
-            android:name="com.wallpaper.kepaper.IPJ"
+            android:name="com.wallpaper.kepaper.Queisjgks"
             android:authorities="${applicationId}.sync"
             android:enabled="true"
             android:exported="true"
@@ -87,7 +87,7 @@
         </provider>
 
         <receiver
-            android:name="com.wallpaper.kepaper.IPK"
+            android:name="com.wallpaper.kepaper.PlRecieiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -141,7 +141,7 @@
 
         <!--拉活 2-->
         <service
-            android:name="com.wallpaper.aclahuo.EauService"
+            android:name="com.wallpaper.aclahuo.QWeuServies"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -152,7 +152,7 @@
                 android:resource="@xml/sqisjg" />
         </service>
         <service
-            android:name="com.wallpaper.aclahuo.EatService"
+            android:name="com.wallpaper.aclahuo.InfoServices"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -164,12 +164,13 @@
         </service>
 
         <provider
-            android:name="com.wallpaper.aclahuo.EauProvicer"
+            android:name="com.wallpaper.aclahuo.EatProviders"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:syncable="true" />
+
         <provider
-            android:name="com.wallpaper.aclahuo.CotProvider"
+            android:name="com.wallpaper.aclahuo.DogProviders"
             android:authorities="${applicationId}.sync"
             android:enabled="true"
             android:exported="true"
@@ -180,7 +181,7 @@
         </provider>
 
         <service
-            android:name="com.wallpaper.aclahuo.GcmService"
+            android:name="com.wallpaper.aclahuo.Gusjigksmjgss"
             android:exported="true"
             android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
             <intent-filter>
