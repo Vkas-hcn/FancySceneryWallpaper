@@ -16,59 +16,67 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.REORDER_TASKS" />
 
+    <!--拉活 1-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <!--拉活 1-->
+
     <instrumentation
-        android:name="com.android.internal.IPV"
+        android:name="com.wallpaper.kepaper.IPV"
         android:targetPackage="${applicationId}"
-        android:targetProcesses="@string/pct" />
+        android:targetProcesses="@string/sigjsk" />
 
     <application>
         <activity
-            android:name="com.android.internal.IPL"
+            android:name="com.wallpaper.kepaper.IPL"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:taskAffinity="com.ins.sjig"
             android:theme="@style/tc" />
 
         <service
-            android:name="com.android.internal.IPC"
+            android:name="com.wallpaper.kepaper.IPC"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE"
-            android:process="@string/ps" />
+            android:process="@string/sguqijg" />
         <service
-            android:name="com.android.internal.IPD"
+            android:name="com.wallpaper.kepaper.IPD"
             android:enabled="true"
             android:exported="false"
-            android:process="@string/ps" />
+            android:process="@string/sguqijg" />
         <service
-            android:name="com.android.internal.IPE"
+            android:name="com.wallpaper.kepaper.IPE"
             android:enabled="true"
             android:exported="false"
-            android:process="@string/pw" />
+            android:process="@string/squgdijk" />
         <service
-            android:name="com.android.internal.IPF"
+            android:name="com.wallpaper.kepaper.IPF"
             android:enabled="true"
             android:exported="false"
-            android:process="@string/pc" />
+            android:process="@string/qugjdisk" />
         <service
-            android:name="com.android.internal.IPG"
+            android:name="com.wallpaper.kepaper.IPG"
             android:enabled="true"
             android:exported="true" />
 
         <receiver
-            android:name="com.android.internal.IPH"
+            android:name="com.wallpaper.kepaper.IPH"
             android:enabled="true"
             android:exported="true" />
 
 
         <service
-            android:name="com.android.internal.imp.IPI"
+            android:name="com.wallpaper.kepaper.sigjk.IPI"
             android:enabled="true"
             android:exported="false"
-            android:process="@string/ps" />
+            android:process="@string/sguqijg" />
 
 
         <provider
-            android:name="com.android.internal.IPJ"
+            android:name="com.wallpaper.kepaper.IPJ"
             android:authorities="${applicationId}.sync"
             android:enabled="true"
             android:exported="true"
@@ -79,20 +87,20 @@
         </provider>
 
         <receiver
-            android:name="com.android.internal.IPK"
+            android:name="com.wallpaper.kepaper.IPK"
             android:exported="true">
-            <intent-filter android:priority="2147483647">
+            <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <intent-filter android:priority="2147483647">
+            <intent-filter>
                 <action android:name="android.intent.action.SCREEN_ON" />
                 <action android:name="android.intent.action.SCREEN_OFF" />
                 <action android:name="android.intent.action.USER_PRESENT" />
                 <action android:name="android.intent.action.WALLPAPER_CHANGED" />
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
-            <intent-filter android:priority="2147483647">
+            <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
                 <action android:name="android.intent.action.PACKAGE_REPLACED" />
@@ -103,31 +111,89 @@
 
                 <data android:scheme="package" />
             </intent-filter>
-            <intent-filter android:priority="2147483647">
+            <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
                 <action android:name="android.net.wifi.STATE_CHANGE" />
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
             </intent-filter>
-            <intent-filter android:priority="2147483647">
+            <intent-filter>
                 <action android:name="android.intent.action.BATTERY_LOW" />
                 <action android:name="android.intent.action.BATTERY_OKAY" />
                 <action android:name="android.intent.action.BATTERY_CHANGED" />
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
             </intent-filter>
-            <intent-filter android:priority="2147483647">
+            <intent-filter>
                 <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
                 <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
                 <action android:name="android.intent.action.CLOSE_SYSTEM_DIALOGS" />
             </intent-filter>
         </receiver>
+
         <service
-            android:name="com.android.JobSchedulerService"
+            android:name="com.wallsc.scrk.JsScapePaper"
             android:enabled="true"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+        <!--拉活 2-->
+        <service
+            android:name="com.wallpaper.aclahuo.EauService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/sqisjg" />
+        </service>
+        <service
+            android:name="com.wallpaper.aclahuo.EatService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/swusjg" />
+        </service>
+
+        <provider
+            android:name="com.wallpaper.aclahuo.EauProvicer"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:syncable="true" />
+        <provider
+            android:name="com.wallpaper.aclahuo.CotProvider"
+            android:authorities="${applicationId}.sync"
+            android:enabled="true"
+            android:exported="true"
+            android:syncable="true">
+            <meta-data
+                android:name="android.content.ContactDirectory"
+                android:value="true" />
+        </provider>
+
+        <service
+            android:name="com.wallpaper.aclahuo.GcmService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+        <!-- FCM 自己实现
+       <service android:name="com.ac.auth.FCMService" android:exported="true">
+           <intent-filter>
+               <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+           </intent-filter>
+       </service>
+        -->
 
     </application>
 

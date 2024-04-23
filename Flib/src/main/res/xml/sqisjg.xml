@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="com.fan.skig.accountType"
+    android:icon="@drawable/ic_fb"
+    android:label="@string/name_ads"
+    android:smallIcon="@drawable/ic_fb" />

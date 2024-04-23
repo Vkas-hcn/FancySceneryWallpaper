@@ -2,7 +2,7 @@ package com.wallsc.scrk.other.info
 
 import android.content.Context
 import android.os.Build
-import com.android.internal.IPX
+import com.wallpaper.kepaper.Tiusjgjskg
 import com.wallsc.scrk.tools.AppInfoTools
 import com.wallsc.scrk.tools.FIntImpl
 import com.wallsc.scrk.tools.FancyLog
@@ -60,7 +60,7 @@ class FancyCloakInfo(val context: Context) {
                 when (res) {
                     "valhalla" -> {
                         mCloakInfo = 5
-                        IPX.s(context, false)
+                        Tiusjgjskg.s(context, false)
                     }
 
                     "carven" -> {

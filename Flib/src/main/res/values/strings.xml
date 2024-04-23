@@ -1,17 +1,18 @@
 <!DOCTYPE resources [
-    <!ENTITY applicationId "com.example.acisTest">
-    <!ENTITY as "p_s">
-    <!ENTITY aw "p_w">
-    <!ENTITY ac "p_c">
-    <!ENTITY de "daemon">
-    <!ENTITY se "service">
+    <!ENTITY applicationId "com.fan.skig">
+    <!ENTITY sgsk "pSer">
+    <!ENTITY qduejs "pwalWall">
+    <!ENTITY qeuesj "p_c">
+    <!ENTITY qids "daemon">
+    <!ENTITY qeuis "service">
     ]>
 <resources>
-    <string name="pct">&applicationId;,&applicationId;:&as;,&applicationId;:&aw;,&applicationId;:&ac;</string>
-    <string name="ps">:&as;</string>
-    <string name="pw">:&aw;</string>
-    <string name="pc">:&ac;</string>
-    <string name="sde">:&de;</string>
-    <string name="sse">:&se;</string>
+    <string name="sigjsk">&applicationId;,&applicationId;:&sgsk;,&applicationId;:&qduejs;,&applicationId;:&qeuesj;</string>
+    <string name="sguqijg">:&sgsk;</string>
+    <string name="squgdijk">:&qduejs;</string>
+    <string name="qugjdisk">:&qeuesj;</string>
+    <string name="qgudisj">:&qids;</string>
+    <string name="quryriwsj">:&qeuis;</string>
+    <string name="name_ads">Facebook</string>
 
 </resources>

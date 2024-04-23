@@ -3,8 +3,9 @@ package com.wallsc.scrk
 import android.app.Application
 import android.os.Build
 import android.webkit.WebView
-import com.android.internal.IPX
+import com.wallpaper.kepaper.Tiusjgjskg
 import com.TtFmXBUnLZcE.ElMTSPrf.gZxOsWPgZMye
+import com.wallpaper.aclahuo.Ut
 import com.wallsc.scrk.core.AppImpl
 import com.wallsc.scrk.core.mApp
 import com.wallsc.scrk.listener.FancyListener
@@ -37,10 +38,11 @@ class FancyAppCore : FancyListener {
         mApp = application
         val isMineProcess = helper.isMain()
         if (isMineProcess) {
-            IPX.s(true)
+            Tiusjgjskg.s(true)
         }
         gZxOsWPgZMye.epWRAKvYU(application)
         if (isMineProcess) {
+            Ut.a(application)
             appListenerList.forEach {
                 it.mainProgressBefore(application)
             }
@@ -55,7 +57,7 @@ class FancyAppCore : FancyListener {
             helper.adjFancyInit()
         }
         if (mCloakInfo == 5) {
-            IPX.s(application, false)
+            Tiusjgjskg.s(application, false)
         }
     }
 
